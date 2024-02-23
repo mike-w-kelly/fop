@@ -17,6 +17,7 @@
   <xsl:template match="par">
     <fo:block>
         <xsl:value-of select="current-time()"/>
+        <fo:inline font-family="MaterialSymbols">&#61270;</fo:inline>
         <xsl:apply-templates />
     </fo:block>
   </xsl:template>

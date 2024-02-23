@@ -21,6 +21,8 @@ RUN tar -xvzf fop-2.9-bin.tar.gz -C /usr/local
 COPY fop_modified /usr/local/fop-2.9/fop/fop
 RUN chmod +x /usr/local/fop-2.9/fop/fop
 
+COPY fop-config.xml /usr/local/fop-2.9/fop/conf/fop-config.xml
+
 RUN wget https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-4/SaxonHE12-4J.zip && \
     mkdir SaxonHE12-4J && \
     unzip SaxonHE12-4J.zip -d SaxonHE12-4J && \
@@ -33,7 +35,7 @@ RUN wget https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-4/Saxo
 WORKDIR /usr/local/fop-2.9/fop/fonts/
 
 # Get Google Font > convert it to otf
-RUN wget https://fonts.gstatic.com/s/materialsymbolsoutlined/v164/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2 && \
+RUN wget -O materialsymbolsoutlined.woff2 https://fonts.gstatic.com/s/materialsymbolsoutlined/v164/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2 && \
     python3 /usr/local/bin/woff2otf.py materialsymbolsoutlined.woff2 materialiconsoutlined.otf && \
     rm materialsymbolsoutlined.woff2
 

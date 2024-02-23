@@ -25,5 +25,5 @@ docker run --user $(id -u):$(id -g) -v $(pwd):/src -w /src -it --rm fop -xml sou
 ```
 
 ```bash
-docker run -v $(pwd):/src -w /src -it --rm fop -xml source.xml -xsl style.xsl -pdf document.pdf
+docker run -v $(pwd):/src -w /src -it --rm fop -c fop-config.xml -xml source.xml -xsl style.xsl -pdf document.pdf
 ```

@@ -2,11 +2,8 @@
   <renderers>
     <renderer mime="application/pdf">
       <fonts>
-        <font kerning="yes" embed-url="file:/usr/local/fop/fonts/CustomFont-Regular.otf">
-          <font-triplet name="CustomFont" style="normal" weight="normal"/>
-        </font>
-        <font kerning="yes" embed-url="file:/usr/local/fop/fonts/CustomFont-Bold.otf">
-          <font-triplet name="CustomFont" style="normal" weight="bold"/>
+        <font kerning="yes" embed-url="file:/usr/local/fop-2.9/fop/fonts/materialiconsoutlined.otf">
+          <font-triplet name="MaterialSymbols" style="normal" weight="normal"/>
         </font>
       </fonts>
     </renderer>
