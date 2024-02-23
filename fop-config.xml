@@ -1,0 +1,14 @@
+<fop version="1.0">
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+        <font kerning="yes" embed-url="file:/usr/local/fop/fonts/CustomFont-Regular.otf">
+          <font-triplet name="CustomFont" style="normal" weight="normal"/>
+        </font>
+        <font kerning="yes" embed-url="file:/usr/local/fop/fonts/CustomFont-Bold.otf">
+          <font-triplet name="CustomFont" style="normal" weight="bold"/>
+        </font>
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>
